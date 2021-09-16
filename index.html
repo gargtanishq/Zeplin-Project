@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <!-- boxicon CDN link -->
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <title>Zeplin</title>
   </head>
   <body>
     <header>
       <div class="leftHead">
-        <img src="logo.jpg" alt="Loading..." class="logo" />
+        <img src="images/logo.jpg" alt="Loading..." class="logo" />
         <p class="logoText cTag">COLUD</p>
         <p class="logoText aTag">ACCESS</p>
       </div>
       <div class="rightHead">
-        <img src="notifyBell.png" alt="Loading..." class="notifyBell" />
+        <img src="images/notifyBell.png" alt="Loading..." class="notifyBell" />
         <div class="userInfo">
           <span class="userName">John.Smith</span>
           <span class="userProject">T-MOBILE USA</span>
         </div>
-        <img src="userPhoto.png" alt="Loading..." class="userPhoto" />
+        <img src="images/userPhoto.png" alt="Loading..." class="userPhoto" />
       </div>
     </header>
+    <!-- side nav bar starts here -->
     <aside>
       <!-- <i class='bx bx-menu'></i> -->
       <div class="side-1">
@@ -35,15 +43,15 @@
       <div class="side-2">
         <span class="sub1">YOUR REQUESTS</span>
         <div class="requests">
-          <div class="request">
+          <div class="request requestOneHover">
             <span class="requestType">Pending</span>
             <span class="requestCount">6</span>
           </div>
-          <div class="request">
+          <div class="request requestTwoHover">
             <span class="requestType">Approved</span>
             <span class="requestCount">6</span>
           </div>
-          <div class="request">
+          <div class="request requestThreeHover">
             <span class="requestType">Rejected</span>
             <span class="requestCount">6</span>
           </div>
@@ -56,17 +64,17 @@
       </div>
       <hr />
       <div class="side-4">
-        <div class="allDetail one">
-          <img src="" alt="." class="allDetailLogo" />
-          <span class="detailType one1">ALL GROUPS</span>
+        <div class="allDetail">
+          <img src="images/groupLogo.svg" alt="." class="allDetailLogo" />
+          <span class="detailType">ALL GROUPS</span>
         </div>
-        <div class="allDetail two">
-          <img src="" alt="." class="allDetailLogo" />
-          <span class="detailType one2">ALL PACKS</span>
+        <div class="allDetail">
+          <img src="images/packLogo.svg" alt="." class="allDetailLogo" />
+          <span class="detailType">ALL PACKS</span>
         </div>
       </div>
     </aside>
-
+    <!-- Middle content starts here -->
     <section>
       <p class="allGroups top">ALL GROUP:</p>
       <div class="recommedNextPage">
@@ -78,8 +86,7 @@
       </div>
       <div class="selectGroups">
         <div class="group">
-          <img src="groupLogo.svg" alt="." class="groupLogo" />
-          <!-- <span class="groupLogo">(G)</span> -->
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
           <div class="groupMentorName">
             <span class="groupName">ABC Security Groups and Ltds</span>
             <span class="mentorName">John Smith</span>
@@ -88,8 +95,7 @@
           <button class="addGroup">+</button>
         </div>
         <div class="group">
-          <img src="groupLogo.svg" alt="." class="groupLogo" />
-          <!-- <span class="groupLogo">(G)</span> -->
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
           <div class="groupMentorName">
             <span class="groupName">ABC Security Groups and Ltds</span>
             <span class="mentorName">John Smith</span>
@@ -98,8 +104,7 @@
           <button class="addGroup">+</button>
         </div>
         <div class="group">
-          <img src="groupLogo.svg" alt="." class="groupLogo" />
-          <!-- <span class="groupLogo">(G)</span> -->
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
           <div class="groupMentorName">
             <span class="groupName">ABC Security Groups and Ltds</span>
             <span class="mentorName">John Smith</span>
@@ -108,8 +113,34 @@
           <button class="addGroup">+</button>
         </div>
         <div class="group">
-          <img src="groupLogo.svg" alt="." class="groupLogo" />
-          <!-- <span class="groupLogo">(G)</span> -->
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName">ABC Security Groups and Ltds</span>
+            <span class="mentorName">John Smith</span>
+          </div>
+          <!-- <img src="" alt="." class="addGroup" /> -->
+          <button class="addGroup">+</button>
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName">ABC Security Groups and Ltds</span>
+            <span class="mentorName">John Smith</span>
+          </div>
+          <!-- <img src="" alt="." class="addGroup" /> -->
+          <button class="addGroup">+</button>
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName">ABC Security Groups and Ltds</span>
+            <span class="mentorName">John Smith</span>
+          </div>
+          <!-- <img src="" alt="." class="addGroup" /> -->
+          <button class="addGroup">+</button>
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
           <div class="groupMentorName">
             <span class="groupName">ABC Security Groups and Ltds</span>
             <span class="mentorName">John Smith</span>
@@ -122,16 +153,23 @@
         <div class="tableTop">
           <p class="allGroups bottom">ALL GROUPS</p>
           <div class="rightTop">
+            <!-- magnifying glass input  -->
             <input
+              type="text"
+              placeholder="&#xF002; Find A Group"
+              style="font-family: Arial, FontAwesome"
+              class="inputGroup"
+            />
+            <!-- --- -->
+            <!-- <input
               type="text"
               placeholder="Find a group"
               name="findGroup"
               class="inputGroup"
-            />
+            /> -->
             <button class="newGroup">+ New Group</button>
           </div>
         </div>
-        <!-- <hr class="bottomHr" /> -->
         <table>
           <thead>
             <tr>
@@ -147,45 +185,92 @@
           <tbody>
             <tr>
               <td class="checkboxGroupNameWidth">
-                <input type="checkbox" class="checkbox" />
-                <span><img src="groupLogo.svg" alt="" class="groupLogotable"> All the new courses are available here</span>
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >Group names are written check out here</a
+                  ></span
+                >
               </td>
               <td class="groupOwnerHid">
-                <img src="userIcon.svg" alt="" class="userIcon"> <a href="#">owner name 1</a>
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">owner name 1</a>
+                </span>
               </td>
               <td class="createdDateHid">20/06/2022</td>
               <td class="actions"><button class="joinBtn">+ Join</button></td>
             </tr>
             <tr>
               <td class="checkboxGroupNameWidth">
-                <input type="checkbox" class="checkbox" />
-                <span><img src="groupLogo.svg" alt="" class="groupLogotable"> All the new courses are available here</span>
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >Group names are written check out here</a
+                  ></span
+                >
               </td>
               <td class="groupOwnerHid">
-                <img src="userIcon.svg" alt="" class="userIcon"> <a href="#">owner name 1</a>
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">owner name 1</a>
+                </span>
               </td>
               <td class="createdDateHid">20/06/2022</td>
               <td class="actions"><button class="joinBtn">+ Join</button></td>
             </tr>
             <tr>
               <td class="checkboxGroupNameWidth">
-                <input type="checkbox" class="checkbox" />
-                <span><img src="groupLogo.svg" alt="" class="groupLogotable"> All the new courses are available here</span>
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >Group names are written check out here</a
+                  ></span
+                >
               </td>
               <td class="groupOwnerHid">
-                <img src="userIcon.svg" alt="" class="userIcon"> <a href="#">owner name 1</a>
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">owner name 1</a>
+                </span>
               </td>
               <td class="createdDateHid">20/06/2022</td>
               <td class="actions"><button class="joinBtn">+ Join</button></td>
             </tr>
             <tr>
               <td class="checkboxGroupNameWidth">
-                <input type="checkbox" class="checkbox" />
-                <span><img src="groupLogo.svg" alt="" class="groupLogotable"> All the new courses are available here</span>
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >Group names are written check out here</a
+                  ></span
+                >
               </td>
               <td class="groupOwnerHid">
-                <img src="userIcon.svg" alt="" class="userIcon">
-                <a href="#">owner name 1</a>
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">owner name 1</a>
+                </span>
               </td>
               <td class="createdDateHid">20/06/2022</td>
               <td class="actions"><button class="joinBtn">+ Join</button></td>
