@@ -1,0 +1,685 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Main CSS starts here */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+body {
+  background-color: #f2f4f8;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px 0 rgba(37, 37, 37, 0.1);
+  align-items: center;
+  max-height: 4rem;
+  padding: 0.5rem 0;
+  background-color: #ffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.leftHead {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+
+.rightHead {
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.logo {
+  width: 36px;
+  height: 28px;
+  flex-grow: 0;
+  margin: 0 0.5rem;
+}
+
+.cTag {
+  color: #e20074;
+}
+
+.logoText {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0.2rem;
+}
+
+.notifyBell,
+.userPhoto {
+  width: 30px;
+  height: 30px;
+}
+
+.notifyBell {
+  margin-right: 0.7rem;
+}
+
+.userName {
+  font-size: 1rem;
+  margin: 0.1rem 0;
+  font-family: Roboto;
+}
+
+.userProject {
+  font-size: 0.6rem;
+  font-family: Roboto;
+  color: #77797c;
+  font-weight: bold;
+}
+
+/* side bar starts here */
+
+aside {
+  width: 13.5rem;
+  height: 100%;
+  position: fixed;
+  background-color: #ffff;
+  margin-top: -18px;
+  padding-top: 0.7rem;
+}
+
+hr {
+  width: 90%;
+  border: solid 1px #f2f4f8;
+}
+
+.side-1,
+.side-2,
+.side-3,
+.side-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.7rem 0.6rem 0.7rem 1.5rem;
+  /* we can remove the top and bottom for side-4, it will come closer to the hr tag */
+}
+
+.sub1,
+.detailType {
+  font-size: 0.7rem;
+  text-align: left;
+  color: #e20074;
+  font-weight: 600;
+  font-family: Roboto;
+}
+
+.detailType {
+  color: black;
+}
+
+.side-4 {
+  padding: 0;
+}
+
+.allDetail {
+  /* margin: 0.5rem 0; */
+  width: 100%;
+}
+.one {
+  background-color: #e20074;
+}
+
+.one1 {
+  color: white;
+}
+
+.allDetailLogo {
+  padding: 0.7rem 0.6rem 0.7rem 1.5rem;
+}
+
+.sub2,
+.request {
+  color: #b8b8b8;
+  font-size: 0.8rem;
+  font-family: Roboto;
+}
+
+.request {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  font-family: Roboto;
+}
+
+.requests {
+  width: 100%;
+}
+
+.requestType {
+  font-family: Roboto;
+}
+
+.sub1 {
+  margin: 0.2rem 0;
+}
+
+.sub2 {
+  width: 8rem;
+  margin: 0.2rem 0;
+}
+
+.sideSub3 {
+  width: 100%;
+}
+
+.requestCount {
+  border-radius: 10px;
+  background-color: #ea168b;
+  text-align: center;
+  width: 20px;
+  height: 14px;
+}
+
+/* section starts here */
+
+section {
+  margin: 4rem 2rem 2rem 15rem;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f4f8;
+}
+
+.allGroups {
+  color: #ea168b;
+  font-weight: bold;
+  letter-spacing: 0.01rem;
+  font-size: 0.8rem;
+  font-family: Roboto;
+  height: 2rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+}
+
+.top {
+  background-color: #f3f6f9;
+  box-shadow: inset 0 -1px 0 0 #e9e9e9;
+}
+
+.recommedNextPage {
+  background-color: #f2f4f8;
+  color: #676767;
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 10px;
+  background-color: #dfe3e7;
+  color: #9b9b9b;
+  border: 0px solid;
+}
+
+.selectGroups {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f4f8;
+}
+
+.group {
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px 0 rgba(126, 142, 177, 0.3);
+  background-color: #fff;
+  margin-right: 0.5rem;
+}
+
+.groupMentorName {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #4a4a4a;
+}
+
+.groupLogo {
+  color: #e20074;
+  padding: 0 1rem;
+}
+
+.groupName,
+.mentorName {
+  white-space: nowrap;
+  width: 7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.groupName {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.mentorName {
+  font-size: 0.6rem;
+  color: #4a4a4a;
+}
+
+.addGroup {
+  border: 5px #e20074;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
+}
+
+.tableTop {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.tableOutlet {
+  margin: 1rem 0;
+  padding: 0.5rem 1.2rem 2rem 1.2rem;
+  background-color: #ffffff;
+}
+
+.newGroup {
+  text-align: center;
+  color: #fff;
+  background-color: #e20074;
+  border-radius: 3px;
+  border: 1px;
+  height: 2rem;
+  width: 6rem;
+  font-size: 0.8rem;
+}
+
+.inputGroup {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px 0 rgba(151, 154, 161, 0.3);
+  height: 1.9rem;
+  width: 10rem;
+  text-align: left;
+  font-size: 0.8rem;
+  border: solid 1px #dee3e6;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #4a4a4a;
+}
+
+thead,
+tr,
+.checkbox {
+  background-color: rgb(230, 230, 230);
+  font-family: Roboto;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: solid black;
+}
+
+.checkbox {
+  border-color: #f2f4f8;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+.checkboxGroupNameWidth {
+  width: 21rem;
+}
+
+th {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.actions {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 0.5rem 0;
+  font-size: 0.6rem;
+}
+
+tbody,
+tr {
+  border-bottom: solid 2px #e8e9eb;
+  border-top: solid 2px #e8e9eb;
+  background-color: #fff;
+}
+
+.joinBtn {
+  color: #e20074;
+  height: 1.2rem;
+  width: 3.5rem;
+  font-size: 0.6rem;
+  border-radius: 3px;
+  border: solid 1px #ea168b;
+  background-color: #fff;
+  font-family: Roboto;
+  font-weight: bold;
+  text-align: center;
+}
+
+thead tr:first-child {
+  background-color: #f2f4f8;
+}
+
+.userIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.2rem;
+  background-color: #e20074;
+}
+
+a {
+  color: #4a4a4a;
+}
+
+.bottomOptions {
+  text-align: left;
+  color: #676767;
+  font-size: 0.8rem;
+  font-family: roboto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+.showing {
+  padding-right: 0.5rem;
+  border-right: 1px solid #979797;
+}
+
+.goto {
+  padding: 0 0.5rem;
+}
+
+.gotoInput {
+  border: solid 1px #979797;
+  background-color: #fff;
+  width: 1.5rem;
+}
+
+.pageNumbers {
+  margin: 0 0.5rem;
+  border-left: 1px solid #979797;
+}
+
+.allPageNo {
+  padding: 0 0.5rem;
+}
+
+.pageNumbersBtn {
+  margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 1120px) {
+  .selectGroups {
+    overflow: auto;
+    justify-content: space-between;
+  }
+
+  .inputGroup {
+    width: 6rem;
+    text-align: center;
+  }
+
+  .bottomOptions {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .groupOwnerHid {
+    display: none;
+  }
+
+  .createdDateHid {
+    display: none;
+  }
+
+  .actions {
+    padding-right: 0.5rem;
+    text-align: right;
+  }
+
+  .inputGroup,
+  .newGroup {
+    height: 1.5rem;
+    width: 4.5rem;
+    font-size: 0.6rem;
+    text-align: center;
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  section {
+    margin-left: 30%;
+  }
+  
+}
+
+@media only screen and (max-width: 641px) {
+  .rightHead {
+    display: flex;
+  }
+
+  aside {
+    display: none;
+  }
+
+  section {
+    margin: 4rem 2rem 2rem 2rem;
+  }
+
+  .group {
+    height: 1.5rem;
+  }
+
+  /* .inputGroup,
+  .newGroup {
+    height: 1.5rem;
+    width: 4.5rem;
+    font-size: 0.6rem;
+    text-align: center;
+  } */
+
+  .groupLogo,
+  .groupName,
+  .addGroup {
+    font-size: 0.6rem;
+  }
+
+  .groupLogo {
+    padding: 0 0.3rem;
+  }
+
+  .mentorName {
+    font-size: 0.45rem;
+    padding-top: 0.2rem;
+  }
+
+  .addGroup {
+    padding: 0 0.3rem;
+    margin: 0 0.2rem;
+  }
+
+  .checkbox {
+    height: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header {
+    justify-content: center;
+  }
+
+  .rightTop {
+    display: flex;
+    align-items: center;
+  }
+
+  .inputGroup {
+    width: 3rem;
+    font-size: 0.5rem;
+  }
+
+  .newGroup {
+    width: 4rem;
+    margin-left: 0.2rem;
+    font-size: 0.5rem;
+  }
+
+  .bottomOptions {
+    margin-right: 0;
+  }
+
+  .notifyBell {
+    margin-right: 0;
+  }
+
+  .joinBtn {
+    height: 1rem;
+    width: 2.5rem;
+    font-size: 0.5rem;
+  }
+}

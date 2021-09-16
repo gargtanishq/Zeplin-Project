@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- boxicon CDN link -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Zeplin</title>
+  </head>
+  <body>
+    <header>
+      <div class="leftHead">
+        <img src="logo.jpg" alt="Loading..." class="logo" />
+        <p class="logoText cTag">COLUD</p>
+        <p class="logoText aTag">ACCESS</p>
+      </div>
+      <div class="rightHead">
+        <img src="notifyBell.png" alt="Loading..." class="notifyBell" />
+        <div class="userInfo">
+          <span class="userName">John.Smith</span>
+          <span class="userProject">T-MOBILE USA</span>
+        </div>
+        <img src="userPhoto.png" alt="Loading..." class="userPhoto" />
+      </div>
+    </header>
+    <aside>
+      <!-- <i class='bx bx-menu'></i> -->
+      <div class="side-1">
+        <span class="sub1">YOUR GROUPS/PACKS</span>
+        <span class="sub2">You don't have access to anything yet</span>
+      </div>
+      <hr />
+      <div class="side-2">
+        <span class="sub1">YOUR REQUESTS</span>
+        <div class="requests">
+          <div class="request">
+            <span class="requestType">Pending</span>
+            <span class="requestCount">6</span>
+          </div>
+          <div class="request">
+            <span class="requestType">Approved</span>
+            <span class="requestCount">6</span>
+          </div>
+          <div class="request">
+            <span class="requestType">Rejected</span>
+            <span class="requestCount">6</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="side-3">
+        <span class="sub1">YOUR APPROVALS</span>
+        <span class="sub2 sideSub3">You don't have any approvals yet</span>
+      </div>
+      <hr />
+      <div class="side-4">
+        <div class="allDetail one">
+          <img src="" alt="." class="allDetailLogo" />
+          <span class="detailType one1">ALL GROUPS</span>
+        </div>
+        <div class="allDetail two">
+          <img src="" alt="." class="allDetailLogo" />
+          <span class="detailType one2">ALL PACKS</span>
+        </div>
+      </div>
+    </aside>
+
+    <section>
+      <p class="allGroups top">ALL GROUP:</p>
+      <div class="recommedNextPage">
+        <p class="recommendedGroups">RECOMMENDED GROUPS</p>
+        <div class="nextPageButtons">
+          <button class="btn prevPage"><</button>
+          <button class="btn nextPage">></button>
+        </div>
+      </div>
+      <div class="selectGroups">
+        <div class="group">
+          <!-- <img src="groupLogo.png" alt="." class="groupLogo" /> -->
+          <span class="groupLogo">(G)</span>
+          <div class="groupMentorName">
+            <span class="groupName">ABC Security Groups and Ltds</span>
+            <span class="mentorName">John Smith</span>
+          </div>
+          <!-- <img src="" alt="." class="addGroup" /> -->
+          <button class="addGroup">+</button>
+        </div>
+        <div class="group">
+          <!-- <img src="groupLogo.png" alt="." class="groupLogo" /> -->
+          <span class="groupLogo">(G)</span>
+          <div class="groupMentorName">
+            <span class="groupName">ABC Security Groups and Ltds</span>
+            <span class="mentorName">John Smith</span>
+          </div>
+          <!-- <img src="" alt="." class="addGroup" /> -->
+          <button class="addGroup">+</button>
+        </div>
+        <div class="group">
+          <!-- <img src="groupLogo.png" alt="." class="groupLogo" /> -->
+          <span class="groupLogo">(G)</span>
+          <div class="groupMentorName">
+            <span class="groupName">ABC Security Groups and Ltds</span>
+            <span class="mentorName">John Smith</span>
+          </div>
+          <!-- <img src="" alt="." class="addGroup" /> -->
+          <button class="addGroup">+</button>
+        </div>
+        <div class="group">
+          <!-- <img src="groupLogo.png" alt="." class="groupLogo" /> -->
+          <span class="groupLogo">(G)</span>
+          <div class="groupMentorName">
+            <span class="groupName">ABC Security Groups and Ltds</span>
+            <span class="mentorName">John Smith</span>
+          </div>
+          <!-- <img src="" alt="." class="addGroup" /> -->
+          <button class="addGroup">+</button>
+        </div>
+      </div>
+      <div class="tableOutlet">
+        <div class="tableTop">
+          <p class="allGroups bottom">ALL GROUPS</p>
+          <div class="rightTop">
+            <input
+              type="text"
+              placeholder="Find a group"
+              name="findGroup"
+              class="inputGroup"
+            />
+            <button class="newGroup">+ New Group</button>
+          </div>
+        </div>
+        <!-- <hr class="bottomHr" /> -->
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" class="checkbox" />
+                <span>GROUP NAME</span>
+              </th>
+              <th class="groupOwnerHid">GROUP OWNER</th>
+              <th class="createdDateHid">CREATED ON</th>
+              <th class="actions">ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox" />
+                <span>All the new courses are available here</span>
+              </td>
+              <td class="groupOwnerHid">
+                <span class="userIcon">O</span> <a href="#">owner name 1</a>
+              </td>
+              <td class="createdDateHid">20/06/2022</td>
+              <td class="actions"><button class="joinBtn">+ Join</button></td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox" />
+                <span>All the new courses are available here</span>
+              </td>
+              <td class="groupOwnerHid">
+                <span class="userIcon">O</span> <a href="#">owner name 1</a>
+              </td>
+              <td class="createdDateHid">20/06/2022</td>
+              <td class="actions"><button class="joinBtn">+ Join</button></td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox" />
+                <span>All the new courses are available here</span>
+              </td>
+              <td class="groupOwnerHid">
+                <span class="userIcon">O</span> <a href="#">owner name 1</a>
+              </td>
+              <td class="createdDateHid">20/06/2022</td>
+              <td class="actions"><button class="joinBtn">+ Join</button></td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox" />
+                <span>All the new courses are available here</span>
+              </td>
+              <td class="groupOwnerHid">
+                <span class="userIcon">O</span>
+                <a href="#">owner name 1</a>
+              </td>
+              <td class="createdDateHid">20/06/2022</td>
+              <td class="actions"><button class="joinBtn">+ Join</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bottomOptions">
+          <span class="showing"> Showing 10-20 </span>
+          <label for="goto" class="goto">Goto</label>
+          <input type="text" class="gotoInput" />
+          <div class="pageNumbers">
+            <button class="btn pageNumbersBtn"><</button>
+            <span class="allPageNo">1 2 3 4...10</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
