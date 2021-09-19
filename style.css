@@ -116,6 +116,7 @@ table {
 body {
   background-color: #f2f4f8;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -175,9 +176,9 @@ header {
   height: 30px;
 }
 
-.notifyBell {
+/* .notifyBell {
   margin-right: 0.7rem;
-}
+} */
 
 .userName {
   font-size: 1rem;
@@ -293,7 +294,6 @@ hr {
 }
 
 .sub2 {
-  /* width: 8rem; */
   margin: 0.5rem 0;
 }
 
@@ -313,6 +313,7 @@ hr {
 }
 
 /* hover property on user request types */
+
 .request:hover .requestType {
   color: black;
   transition: ease-out 0.3s;
@@ -322,7 +323,7 @@ hr {
   background-color: #ea168b;
 }
 
-/* section starts here */
+/* -------------- section starts here ----------*/
 
 section {
   margin: 4rem 2rem 0 15rem;
@@ -486,6 +487,11 @@ section {
   content: "New Group";
 }
 
+.groupOwnerHid,
+.createdDateHid {
+  text-align: center;
+}
+
 .inputGroup {
   text-align: center;
   background-color: #fff;
@@ -521,6 +527,30 @@ tr,
   text-align: left;
   color: solid black;
 }
+
+/* table data scroll css*/
+
+thead,
+tbody,
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too*/
+}
+
+tbody {
+  display: block;
+  height: 20rem;
+  overflow: scroll;
+}
+
+/* hide scroll bar in table  */
+
+tbody::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- */
 
 .checkbox {
   border-color: #f2f4f8;
@@ -561,7 +591,8 @@ th {
 }
 
 .actions {
-  text-align: center;
+  padding-right: 1rem;
+  text-align: right;
 }
 
 th,
@@ -572,8 +603,8 @@ td {
 
 tbody,
 tr {
-  border-bottom: solid 2px #e8e9eb;
-  border-top: solid 2px #e8e9eb;
+  border-bottom: solid 1px #e8e9eb;
+  border-top: solid 1px #e8e9eb;
   background-color: #fff;
 }
 
@@ -598,6 +629,15 @@ tr {
   transition: ease 0.2s;
   cursor: pointer;
   font-weight: 100;
+  font-size: 0.75rem;
+}
+
+.joinBtn:hover span {
+  display: none;
+}
+
+.joinBtn:hover:before {
+  content: "Join";
 }
 
 thead tr:first-child {
@@ -657,14 +697,19 @@ a {
 /* Scroll bar css */
 
 .selectGroups {
-  overflow: auto;
-  direction: ltr;
-  scrollbar-color: #79511a #7a3131;
+  overflow-x: scroll;
+  /* scrollbar-color: #79511a #7a3131; */
   scrollbar-width: thin;
 }
 
 .selectGroups::-webkit-scrollbar {
   display: none;
+}
+
+@media only screen and (max-width: 1431px) {
+  .checkboxGroupNameWidth {
+    display: flex;
+  }
 }
 
 @media only screen and (max-width: 1120px) {
@@ -735,6 +780,7 @@ a {
     display: flex;
     justify-content: left;
     align-items: center;
+    width: 20rem;
   }
 }
 
@@ -848,18 +894,35 @@ a {
 }
 
 @media only screen and (max-width: 375px) {
-  .leftHead,
+  /* .leftHead,
   .rightHead {
     padding: 0;
     margin: 0 0.4rem;
-  }
+  } */
 
   header {
     justify-content: space-between;
   }
 
+  .userName {
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+
+  .userProject {
+    font-size: 0.55rem;
+  }
+
   .userInfo {
-    display: none;
+    margin: 0 0.15rem;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .logoText {
+    font-size: 0.9rem;
   }
 
   .groupNameLink {
@@ -886,5 +949,27 @@ a {
 
   .bottomOptions {
     font-size: 0.45rem;
+  }
+
+  .checkboxGroupNameWidth {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  header {
+    justify-content: space-between;
+  }
+
+  .rightHead {
+    padding: 0;
+  }
+
+  .leftHead {
+    padding: 0;
+  }
+
+  section {
+    margin: 4rem 0.5rem 2rem 0.5rem;
   }
 }
