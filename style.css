@@ -308,7 +308,7 @@ hr {
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
-  padding: .1rem;
+  padding: 0.1rem;
 }
 
 /* hover property on user request types */
@@ -427,19 +427,14 @@ section {
   color: #4a4a4a;
 }
 
-.addGroup {
+.addSign {
   border: 5px #e20074;
   border-radius: 5px;
   margin: 0 0.5rem;
 }
 
-/* add group from recommended groups options */
-
-.addGroup:hover {
-  color: white;
-  background: #e20074;
+.addSign:hover {
   cursor: pointer;
-  transition: ease-out 0.2s;
 }
 
 .tableTop {
@@ -464,7 +459,7 @@ section {
   border-radius: 5px;
   border: 1px;
   height: 2rem;
-  width: 6rem;
+  width: 7rem;
   font-size: 0.8rem;
   border: solid 1px #e20074;
 }
@@ -484,30 +479,33 @@ section {
 
 /* sreach icon alignment */
 
-.rightTop{
+.rightTop {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-.bx{
+::placeholder {
+  color: #4a4a4a;
+  opacity: 0.5;
+}
+
+.bx {
   position: absolute;
   left: 2px;
-  opacity: .5;
+  opacity: 0.5;
   padding-left: 0.2rem;
 }
 
 /* -------- */
 
-
 .inputGroup {
   text-align: center;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 1px 5px 0 rgba(151, 154, 161, 0.3);
   height: 1.9rem;
-  width: 12rem;
+  width: 13rem;
   text-align: left;
   font-size: 0.8rem;
   border: solid 1px #dee3e6;
@@ -547,10 +545,20 @@ tr {
   table-layout: fixed; /* even columns width , fix width of table too*/
 }
 
+thead {
+  border-top: solid 1px #e8e9eb;
+}
+
+tr:not(:last-child) {
+  border-bottom: solid 1px #e8e9eb;
+}
+
 tbody {
   display: block;
   height: 20rem;
   overflow: scroll;
+  border-bottom: solid 1px #e8e9eb;
+  border-top: solid 1px #e8e9eb;
 }
 
 /* hide scroll bar in table  */
@@ -576,7 +584,7 @@ tbody::-webkit-scrollbar {
 .checkboxGroupNameWidth {
   vertical-align: baseline;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 .subCheckbox {
@@ -612,16 +620,14 @@ td {
 
 tbody,
 tr {
-  border-bottom: solid 1px #e8e9eb;
-  border-top: solid 1px #e8e9eb;
   background-color: #fff;
 }
 
 .joinBtn {
   color: #e20074;
-  height: 1.2rem;
-  width: 3.5rem;
-  font-size: 0.6rem;
+  height: 1.4rem;
+  width: 4rem;
+  font-size: 0.66rem;
   border-radius: 3px;
   border: solid 1px #ea168b;
   background-color: #fff;
@@ -843,11 +849,10 @@ a {
   .rightTop {
     display: flex;
     align-items: center;
-    
   }
 
-  .rightHead{
-    margin-right: .2rem;
+  .rightHead {
+    margin-right: 0.2rem;
   }
 
   .inputGroup {
