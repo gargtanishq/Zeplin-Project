@@ -176,10 +176,6 @@ header {
   height: 30px;
 }
 
-/* .notifyBell {
-  margin-right: 0.7rem;
-} */
-
 .userName {
   font-size: 1rem;
   margin: 0.1rem 0;
@@ -226,7 +222,7 @@ hr {
   font-size: 0.7rem;
   text-align: left;
   color: #e20074;
-  font-weight: 600;
+  font-weight: 700;
   font-family: "Roboto", sans-serif;
 }
 
@@ -277,6 +273,7 @@ hr {
   margin: 1rem 0;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  align-items: center;
 }
 
 .requests {
@@ -290,7 +287,7 @@ hr {
 
 .sub1 {
   margin: 0.2rem 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .sub2 {
@@ -310,6 +307,8 @@ hr {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.75rem;
+  padding: .1rem;
 }
 
 /* hover property on user request types */
@@ -375,7 +374,6 @@ section {
   cursor: pointer;
   color: white;
   transition: ease-out 0.2s;
-  font-size: 0.7rem;
 }
 
 .selectGroups {
@@ -476,21 +474,32 @@ section {
 .newGroup:hover {
   color: white;
   background: #e20074;
-  font-weight: 600;
   transition: ease 0.2s;
-}
-
-.newGroup:hover span {
-  display: none;
-}
-.newGroup:hover:before {
-  content: "New Group";
 }
 
 .groupOwnerHid,
 .createdDateHid {
   text-align: center;
 }
+
+/* sreach icon alignment */
+
+.rightTop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bx{
+  position: absolute;
+  left: 2px;
+  opacity: .5;
+  padding-left: 0.2rem;
+}
+
+/* -------- */
+
 
 .inputGroup {
   text-align: center;
@@ -503,7 +512,7 @@ section {
   font-size: 0.8rem;
   border: solid 1px #dee3e6;
   margin-right: 0.5rem;
-  padding-left: 0.4rem;
+  padding-left: 1.5rem;
 }
 
 .inputGroup:hover {
@@ -565,9 +574,9 @@ tbody::-webkit-scrollbar {
 /* alinged the table content group name actions and other 2  */
 
 .checkboxGroupNameWidth {
-  /* display: flex;
-  align-items: center; */
   vertical-align: baseline;
+  display: flex;
+    align-items: center;
 }
 
 .subCheckbox {
@@ -629,15 +638,6 @@ tr {
   transition: ease 0.2s;
   cursor: pointer;
   font-weight: 100;
-  font-size: 0.75rem;
-}
-
-.joinBtn:hover span {
-  display: none;
-}
-
-.joinBtn:hover:before {
-  content: "Join";
 }
 
 thead tr:first-child {
@@ -698,7 +698,6 @@ a {
 
 .selectGroups {
   overflow-x: scroll;
-  /* scrollbar-color: #79511a #7a3131; */
   scrollbar-width: thin;
 }
 
@@ -844,6 +843,11 @@ a {
   .rightTop {
     display: flex;
     align-items: center;
+    
+  }
+
+  .rightHead{
+    margin-right: .2rem;
   }
 
   .inputGroup {
@@ -894,19 +898,12 @@ a {
 }
 
 @media only screen and (max-width: 375px) {
-  /* .leftHead,
-  .rightHead {
-    padding: 0;
-    margin: 0 0.4rem;
-  } */
-
   header {
     justify-content: space-between;
   }
 
   .userName {
     font-size: 0.85rem;
-    font-weight: bold;
   }
 
   .userProject {
@@ -940,7 +937,6 @@ a {
 
   .inputGroup {
     width: 3.5rem;
-    padding: 0 0.1rem;
   }
 
   .newGroup {
