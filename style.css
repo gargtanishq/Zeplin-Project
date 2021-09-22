@@ -109,6 +109,10 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Main CSS starts here */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
@@ -236,6 +240,7 @@ hr {
 
 .allDetail {
   width: 100%;
+  height: 2.2rem;
   display: flex;
   vertical-align: center;
   align-items: center;
@@ -255,7 +260,8 @@ hr {
 }
 
 .allDetailLogo {
-  padding: 0.7rem 0.6rem 0.7rem 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: .7rem;
   height: 1rem;
 }
 
@@ -561,12 +567,19 @@ tbody {
   border-top: solid 1px #e8e9eb;
 }
 
-/* hide scroll bar in table  */
+/* style scroll bar in table  */
 
-tbody::-webkit-scrollbar {
-  display: none;
+tbody{
+  overflow-x: hidden;
 }
 
+tbody::-webkit-scrollbar {
+  width: 2px; background: #dee3e6; 
+}
+tbody::-webkit-scrollbar-thumb {
+  background: #bebebe;
+
+}
 /* --- */
 
 .checkbox {
@@ -704,7 +717,6 @@ a {
 
 .selectGroups {
   overflow-x: scroll;
-  scrollbar-width: thin;
 }
 
 .selectGroups::-webkit-scrollbar {
@@ -731,6 +743,15 @@ a {
   .bottomOptions {
     font-size: 0.6rem;
   }
+
+  tbody{
+    height: 16.5rem;
+  }
+
+  .tableOutlet{
+    padding-bottom: 1rem;
+  }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -941,7 +962,7 @@ a {
   }
 
   .inputGroup {
-    width: 3.5rem;
+    width: 5rem;
   }
 
   .newGroup {
@@ -955,6 +976,7 @@ a {
   .checkboxGroupNameWidth {
     width: 100%;
   }
+
 }
 
 @media only screen and (max-width: 465px) {
