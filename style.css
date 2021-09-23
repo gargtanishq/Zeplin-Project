@@ -261,7 +261,7 @@ hr {
 
 .allDetailLogo {
   padding-left: 1.5rem;
-  padding-right: .7rem;
+  padding-right: 0.7rem;
   height: 1rem;
 }
 
@@ -480,7 +480,8 @@ section {
 
 .groupOwnerHid,
 .createdDateHid {
-  text-align: center;
+  text-align: left;
+  padding-left: 4rem;
 }
 
 /* sreach icon alignment */
@@ -569,16 +570,16 @@ tbody {
 
 /* style scroll bar in table  */
 
-tbody{
+tbody {
   overflow-x: hidden;
 }
 
 tbody::-webkit-scrollbar {
-  width: 2px; background: #dee3e6; 
+  width: 2px;
+  background: #dee3e6;
 }
 tbody::-webkit-scrollbar-thumb {
   background: #bebebe;
-
 }
 /* --- */
 
@@ -605,6 +606,20 @@ tbody::-webkit-scrollbar-thumb {
 }
 
 /* -------- */
+
+/* adding sorting img margin to align it in center */
+
+.sort{
+  margin: 0 auto;
+}
+
+.sort:hover{
+  cursor: pointer;
+  border: solid 1px #e20074;
+}
+
+/* ---- */
+
 .groupNameLink {
   color: #e20074;
   padding-left: 0.4rem;
@@ -723,9 +738,20 @@ a {
   display: none;
 }
 
+/* smothh scroll when next and prev button  */
+
 @media only screen and (max-width: 1431px) {
   .checkboxGroupNameWidth {
     display: flex;
+  }
+}
+
+@media only screen and (max-width: 1364px){
+  .groupNameLink {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 
@@ -744,14 +770,13 @@ a {
     font-size: 0.6rem;
   }
 
-  tbody{
+  tbody {
     height: 16.5rem;
   }
 
-  .tableOutlet{
+  .tableOutlet {
     padding-bottom: 1rem;
   }
-
 }
 
 @media only screen and (max-width: 900px) {
@@ -976,7 +1001,6 @@ a {
   .checkboxGroupNameWidth {
     width: 100%;
   }
-
 }
 
 @media only screen and (max-width: 465px) {

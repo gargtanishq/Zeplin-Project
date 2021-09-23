@@ -87,11 +87,11 @@
         <div class="recommedNextPage">
           <p class="recommendedGroups">RECOMMENDED GROUPS</p>
           <div class="nextPageButtons">
-            <button class="btn prevPage"><span><</span></button>
-            <button class="btn nextPage"><span>></span></button>
+            <button class="btn prevPage" id="scrollPageLeft"><span><</span></button>
+            <button class="btn nextPage" id="scrollPageRight"><span>></span></button>
           </div>
         </div>
-        <div class="selectGroups">
+        <div class="selectGroups" id="selectGroupsId">
           <div class="group">
             <img src="images/groupLogo.svg" alt="." class="groupLogo" />
             <div class="groupMentorName">
@@ -182,6 +182,8 @@
                 placeholder="Find a group"
                 style="font-family: Arial, FontAwesome"
                 class="inputGroup"
+                id="inputGroupName"
+                onkeyup="searchGroupName()"
               />
               <button class="newGroup"><span>+ New Group</span></button>
             </div>
@@ -193,6 +195,7 @@
                 <th class="checkboxGroupNameWidth">
                   <input type="checkbox" class="checkbox" />
                   <span>GROUP NAME</span>
+                  <img src="images/Sorting.svg" alt=".." id="sorting" class="sort">
                 </th>
                 <th class="groupOwnerHid">GROUP OWNER</th>
                 <th class="createdDateHid">CREATED ON</th>
@@ -210,17 +213,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >The Meme Team</a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Mayank</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">20/06/2021</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -235,17 +238,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >Orange Crush</a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Yash</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">10/10/2022</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -260,17 +263,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >D HRTeam </a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Abhinav</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">20/12/2010</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -285,17 +288,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >CBE Security groups </a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Sanjana</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">18/09/1996</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -310,17 +313,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >Br HRCare Talent Scout Sr.Managers</a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Vaibhav</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">20/06/1998</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -335,17 +338,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >AppRas</a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Zubair</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">02/01/2013</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -360,17 +363,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >Ar Orange Crush </a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Chandu</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">20/06/1980</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -385,17 +388,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >ATeam </a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Kabair</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">20/06/1996</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -410,17 +413,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      > ABC Security Groups</a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Rachit</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">13/04/2009</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -435,17 +438,17 @@
                       class="groupLogotable"
                     />
                     <a href="#" class="groupNameLink"
-                      >Group names are written check out here</a
+                      >1HRCare Talent Scout Sr.Managers</a
                     ></span
                   >
                 </td>
                 <td class="groupOwnerHid">
                   <span class="imageText">
                     <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">owner name 1</a>
+                    <a href="#">Nikhil</a>
                   </span>
                 </td>
-                <td class="createdDateHid">20/06/2022</td>
+                <td class="createdDateHid">18/05/1996</td>
                 <td class="actions">
                   <button class="joinBtn"><span>+ Join</span></button>
                 </td>
@@ -465,4 +468,5 @@
       </section>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
