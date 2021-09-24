@@ -112,3 +112,4 @@ function toggleNavbar(){
       checkClass.className = "navbar"; 
   } 
 }
+

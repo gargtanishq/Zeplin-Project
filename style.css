@@ -118,7 +118,7 @@ table {
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-html{
+html {
   height: 100vh;
   font-size: 16px;
 }
@@ -540,7 +540,7 @@ section {
   cursor: pointer;
 }
 
-input[type=text] {
+input[type="text"] {
   color: #2a2a2a;
 }
 
@@ -634,7 +634,7 @@ tbody::-webkit-scrollbar-thumb {
 .sort:hover {
   cursor: pointer;
   border: solid 1px #e20074;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 /* ---- */
@@ -657,14 +657,14 @@ th {
 .actions {
   padding-right: 1rem;
   text-align: right;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 th,
 td {
   padding: 0.5rem 0;
   font-size: 0.7rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 tbody,
@@ -693,7 +693,7 @@ tr {
   transition: ease 0.2s;
   cursor: pointer;
   font-weight: 100;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 thead tr:first-child {
@@ -705,7 +705,7 @@ thead tr:first-child {
   height: 0.7rem;
   margin-right: 0.2rem;
   margin-right: 0.3rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 a {
@@ -721,18 +721,18 @@ a {
   justify-content: end;
   align-items: center;
   margin-top: 1rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .showing {
   padding-right: 0.5rem;
   border-right: 1px solid #979797;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .goto {
   padding: 0 0.5rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .gotoInput {
@@ -744,17 +744,42 @@ a {
 .pageNumbers {
   margin: 0 0.5rem;
   border-left: 1px solid #979797;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  padding: 0 0.2rem;
+}
+
+ul li {
+  list-style: none;
+  margin: 0 0.2rem;
+}
+
+ul li.pageNumber{
+  text-align: center;
+}
+
+ul li a{
+  display: block;
+  text-decoration: none;
+}
+
+ul li.pageNumber:hover a,
+ul li.pageNumber.active a{
+  color: #e20074;
 }
 
 .allPageNo {
   padding: 0 0.5rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .pageNumbersBtn {
   margin-left: 0.5rem;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 /* Scroll bar css */
@@ -789,28 +814,28 @@ a {
   .selectGroups {
     overflow: auto;
     justify-content: space-between;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .inputGroup {
     width: 8rem;
     text-align: left;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .bottomOptions {
     font-size: 0.6rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   tbody {
     height: 16.5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .tableOutlet {
     padding-bottom: 1rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 }
 
@@ -826,7 +851,7 @@ a {
   .actions {
     padding-right: 0.5rem;
     text-align: right;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .inputGroup {
@@ -834,14 +859,14 @@ a {
     width: 8rem;
     height: 1.5rem;
     font-size: 0.6rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   .newGroup {
     height: 1.5rem;
     width: 4.5rem;
     font-size: 0.6rem;
     text-align: center;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   aside {
@@ -870,7 +895,7 @@ a {
     justify-content: left;
     align-items: center;
     /* width: 20rem;/ */
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 }
 
@@ -883,7 +908,7 @@ a {
     color: #e20074;
     margin-left: 0.4rem;
     margin-right: 0.4rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   .side-1,
   .side-2,
@@ -891,12 +916,12 @@ a {
   .side-4 {
     padding-left: 1rem;
     padding-right: 1rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
-  .allDetailLogo{
+  .allDetailLogo {
     padding-left: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .logo {
@@ -905,7 +930,7 @@ a {
 
   .fa-bars:hover {
     cursor: pointer;
-    opacity: .5;
+    opacity: 0.5;
   }
 
   #toggleNavbar {
@@ -926,40 +951,40 @@ a {
 
   .userInfo {
     display: none;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .userPhoto {
     margin-left: 0.5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   section {
     margin: 4rem 2rem 2rem 2rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .group {
     height: 2rem;
     padding: 0.4rem 0;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .groupName,
   .addGroup {
     font-size: 0.6rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .groupName {
     margin-bottom: 0.1rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .groupLogo {
     padding: 0 0.3rem;
     height: 1.2rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .groupLogotable {
@@ -970,13 +995,13 @@ a {
 
   .mentorName {
     font-size: 0.45rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .addGroup {
     padding: 0 0.3rem;
     margin: 0 0.2rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .checkbox {
@@ -992,25 +1017,25 @@ a {
   .rightTop {
     display: flex;
     align-items: center;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .rightHead {
     margin-right: 0.2rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .inputGroup {
     width: 5rem;
     font-size: 0.5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .newGroup {
     width: 4rem;
     margin-left: 0.2rem;
     font-size: 0.5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .bottomOptions {
@@ -1025,12 +1050,12 @@ a {
     height: 1rem;
     width: 2.5rem;
     font-size: 0.5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .groupNameLink {
     font-size: 0.6rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   /* hiding mentor name as it was too small in mobile view*/
 
@@ -1048,7 +1073,7 @@ a {
 
   .bottomOptions {
     font-size: 0.5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .logo {
@@ -1057,7 +1082,7 @@ a {
 
   .fa-bars {
     margin-right: 0.4rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 }
 
@@ -1138,7 +1163,7 @@ a {
 
   section {
     margin: 4rem 0.5rem 2rem 0.5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 }
 

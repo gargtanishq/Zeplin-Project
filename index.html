@@ -462,8 +462,16 @@
             <label for="goto" class="goto">Goto</label>
             <input type="text" class="gotoInput" />
             <div class="pageNumbers">
-              <button class="btn pageNumbersBtn"><span><</span></button>
-              <span class="allPageNo">1 2 3 4...10</span>
+              <!-- <button class="btn pageNumbersBtn"><span><</span></button> -->
+              <!-- <span class="allPageNo">1 2 3 4...10</span> -->
+              <ul>
+                <li><a href="#" class="prev btn pageNumbersBtn"><</a></li>
+                <li class="pageNumber active"><a href="#">1</a></li>
+                <li class="pageNumber"><a href="#">2</a></li>
+                <li class="pageNumber"><a href="#">3</a></li>
+                <li class="pageNumber"><a href="#">4</a></li>
+                <li><a href="#" class="next btn pageNumbersBtn">></a></li>
+              </ul>
             </div>
           </div>
         </div>
