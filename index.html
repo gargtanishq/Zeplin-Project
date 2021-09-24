@@ -18,10 +18,12 @@
     <title>Zeplin</title>
   </head>
   <body>
-    <div class="wrapper">
+    <!-- <div class="wrapper"> -->
       <!-- header with logo and user info -->
       <header>
+        
         <div class="leftHead">
+          <i class="fa fa-bars" aria-hidden="true" onclick="toggleNavbar()" id="toggleNavbar"></i>
           <img src="images/logo.jpg" alt="Loading..." class="logo" />
           <p class="logoText cTag">COLUD</p>
           <p class="logoText aTag">ACCESS</p>
@@ -40,7 +42,7 @@
         </div>
       </header>
       <!-- side nav bar starts here -->
-      <aside>
+      <aside id="side-navbar" class="navbar">
         <!-- <i class='bx bx-menu'></i> -->
         <div class="side-1">
           <span class="sub1">YOUR GROUPS/PACKS</span>
@@ -183,8 +185,8 @@
                 style="font-family: Arial, FontAwesome"
                 class="inputGroup"
                 id="inputGroupName"
-                onkeyup="searchGroupName()"
-              />
+                onkeyup="searchFunc()"
+                />
               <button class="newGroup"><span>+ New Group</span></button>
             </div>
           </div>
@@ -466,7 +468,7 @@
           </div>
         </div>
       </section>
-    </div>
+    <!-- </div> -->
   </body>
   <script src="script.js"></script>
 </html>

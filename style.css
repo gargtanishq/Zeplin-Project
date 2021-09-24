@@ -71,6 +71,7 @@ td {
   vertical-align: baseline;
   background: transparent;
 }
+
 body {
   line-height: 1;
 }
@@ -117,6 +118,11 @@ table {
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+html{
+  height: 100vh;
+  font-size: 16px;
+}
+
 body {
   background-color: #f2f4f8;
   font-family: "Roboto", sans-serif;
@@ -128,7 +134,7 @@ header {
   justify-content: space-between;
   box-shadow: 0 1px 4px 0 rgba(37, 37, 37, 0.1);
   align-items: center;
-  max-height: 4rem;
+  height: 3.5rem;
   padding: 0.5rem 0;
   background-color: #ffff;
   position: fixed;
@@ -142,6 +148,13 @@ header {
   align-items: center;
   padding-left: 1.5rem;
 }
+
+/* initailly hidden navbar icon */
+
+#toggleNavbar {
+  display: none;
+}
+/*  */
 
 .rightHead {
   display: flex;
@@ -161,7 +174,7 @@ header {
   width: 36px;
   height: 28px;
   flex-grow: 0;
-  margin: 0 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .cTag {
@@ -336,6 +349,7 @@ section {
   display: flex;
   flex-direction: column;
   background-color: #f2f4f8;
+  overflow: hidden;
 }
 
 .allGroups {
@@ -481,7 +495,7 @@ section {
 .groupOwnerHid,
 .createdDateHid {
   text-align: left;
-  padding-left: 4rem;
+  padding-left: 3.4rem;
 }
 
 /* sreach icon alignment */
@@ -524,6 +538,10 @@ section {
   border: 1px solid #e20074;
   transition: ease-out 0.2s;
   cursor: pointer;
+}
+
+input[type=text] {
+  color: #2a2a2a;
 }
 
 table {
@@ -609,13 +627,14 @@ tbody::-webkit-scrollbar-thumb {
 
 /* adding sorting img margin to align it in center */
 
-.sort{
-  margin: 0 auto;
+.sort {
+  margin-left: auto;
 }
 
-.sort:hover{
+.sort:hover {
   cursor: pointer;
   border: solid 1px #e20074;
+  transition: all .3s ease;
 }
 
 /* ---- */
@@ -638,12 +657,14 @@ th {
 .actions {
   padding-right: 1rem;
   text-align: right;
+  transition: all .3s ease;
 }
 
 th,
 td {
   padding: 0.5rem 0;
   font-size: 0.7rem;
+  transition: all .3s ease;
 }
 
 tbody,
@@ -672,6 +693,7 @@ tr {
   transition: ease 0.2s;
   cursor: pointer;
   font-weight: 100;
+  transition: all .3s ease;
 }
 
 thead tr:first-child {
@@ -683,6 +705,7 @@ thead tr:first-child {
   height: 0.7rem;
   margin-right: 0.2rem;
   margin-right: 0.3rem;
+  transition: all .3s ease;
 }
 
 a {
@@ -698,15 +721,18 @@ a {
   justify-content: end;
   align-items: center;
   margin-top: 1rem;
+  transition: all .3s ease;
 }
 
 .showing {
   padding-right: 0.5rem;
   border-right: 1px solid #979797;
+  transition: all .3s ease;
 }
 
 .goto {
   padding: 0 0.5rem;
+  transition: all .3s ease;
 }
 
 .gotoInput {
@@ -718,14 +744,17 @@ a {
 .pageNumbers {
   margin: 0 0.5rem;
   border-left: 1px solid #979797;
+  transition: all .3s ease;
 }
 
 .allPageNo {
   padding: 0 0.5rem;
+  transition: all .3s ease;
 }
 
 .pageNumbersBtn {
   margin-left: 0.5rem;
+  transition: all .3s ease;
 }
 
 /* Scroll bar css */
@@ -746,8 +775,9 @@ a {
   }
 }
 
-@media only screen and (max-width: 1364px){
+@media only screen and (max-width: 1364px) {
   .groupNameLink {
+    width: 9rem;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -759,23 +789,28 @@ a {
   .selectGroups {
     overflow: auto;
     justify-content: space-between;
+    transition: all .3s ease;
   }
 
   .inputGroup {
     width: 8rem;
     text-align: left;
+    transition: all .3s ease;
   }
 
   .bottomOptions {
     font-size: 0.6rem;
+    transition: all .3s ease;
   }
 
   tbody {
     height: 16.5rem;
+    transition: all .3s ease;
   }
 
   .tableOutlet {
     padding-bottom: 1rem;
+    transition: all .3s ease;
   }
 }
 
@@ -791,6 +826,7 @@ a {
   .actions {
     padding-right: 0.5rem;
     text-align: right;
+    transition: all .3s ease;
   }
 
   .inputGroup {
@@ -798,12 +834,14 @@ a {
     width: 8rem;
     height: 1.5rem;
     font-size: 0.6rem;
+    transition: all .3s ease;
   }
   .newGroup {
     height: 1.5rem;
     width: 4.5rem;
     font-size: 0.6rem;
     text-align: center;
+    transition: all .3s ease;
   }
 
   aside {
@@ -831,7 +869,8 @@ a {
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 20rem;
+    /* width: 20rem;/ */
+    transition: all .3s ease;
   }
 }
 
@@ -840,31 +879,87 @@ a {
     display: flex;
   }
 
+  .fa-bars {
+    color: #e20074;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    transition: all .3s ease;
+  }
+  .side-1,
+  .side-2,
+  .side-3,
+  .side-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    transition: all .3s ease;
+  }
+
+  .allDetailLogo{
+    padding-left: 0;
+    transition: all .3s ease;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .fa-bars:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+
+  #toggleNavbar {
+    display: block;
+  }
+
   aside {
+    transform: translate(-200%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbarclose {
+    transform: translate(1%);
+    z-index: 1;
+    width: 14rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .userInfo {
     display: none;
+    transition: all .3s ease;
+  }
+
+  .userPhoto {
+    margin-left: 0.5rem;
+    transition: all .3s ease;
   }
 
   section {
     margin: 4rem 2rem 2rem 2rem;
+    transition: all .3s ease;
   }
 
   .group {
-    height: 1.5rem;
+    height: 2rem;
     padding: 0.4rem 0;
+    transition: all .3s ease-in-out;
   }
 
   .groupName,
   .addGroup {
     font-size: 0.6rem;
+    transition: all .3s ease;
   }
 
   .groupName {
     margin-bottom: 0.1rem;
+    transition: all .3s ease;
   }
 
   .groupLogo {
     padding: 0 0.3rem;
     height: 1.2rem;
+    transition: all .3s ease;
   }
 
   .groupLogotable {
@@ -875,11 +970,13 @@ a {
 
   .mentorName {
     font-size: 0.45rem;
+    transition: all .3s ease;
   }
 
   .addGroup {
     padding: 0 0.3rem;
     margin: 0 0.2rem;
+    transition: all .3s ease;
   }
 
   .checkbox {
@@ -895,21 +992,25 @@ a {
   .rightTop {
     display: flex;
     align-items: center;
+    transition: all .3s ease;
   }
 
   .rightHead {
     margin-right: 0.2rem;
+    transition: all .3s ease;
   }
 
   .inputGroup {
     width: 5rem;
     font-size: 0.5rem;
+    transition: all .3s ease;
   }
 
   .newGroup {
     width: 4rem;
     margin-left: 0.2rem;
     font-size: 0.5rem;
+    transition: all .3s ease;
   }
 
   .bottomOptions {
@@ -924,10 +1025,12 @@ a {
     height: 1rem;
     width: 2.5rem;
     font-size: 0.5rem;
+    transition: all .3s ease;
   }
 
   .groupNameLink {
     font-size: 0.6rem;
+    transition: all .3s ease;
   }
   /* hiding mentor name as it was too small in mobile view*/
 
@@ -945,6 +1048,16 @@ a {
 
   .bottomOptions {
     font-size: 0.5rem;
+    transition: all .3s ease;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .fa-bars {
+    margin-right: 0.4rem;
+    transition: all .3s ease;
   }
 }
 
@@ -955,22 +1068,26 @@ a {
 
   .userName {
     font-size: 0.85rem;
+    transition: all 0.3s ease;
   }
 
   .userProject {
     font-size: 0.55rem;
+    transition: all 0.3s ease;
   }
 
   .userInfo {
     margin: 0 0.15rem;
+    transition: all 0.3s ease;
   }
 
   .logo {
-    margin: 0;
+    margin-left: 0;
   }
 
   .logoText {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
   }
 
   .groupNameLink {
@@ -984,10 +1101,12 @@ a {
   /* all group bottom in table  */
   .bottom {
     font-size: 0.7rem;
+    transition: all 0.3s ease;
   }
 
   .inputGroup {
     width: 5rem;
+    transition: all 0.3s ease;
   }
 
   .newGroup {
@@ -996,10 +1115,11 @@ a {
 
   .bottomOptions {
     font-size: 0.45rem;
+    transition: all 0.3s ease;
   }
 
   .checkboxGroupNameWidth {
-    width: 100%;
+    width: 10rem;
   }
 }
 
@@ -1018,5 +1138,8 @@ a {
 
   section {
     margin: 4rem 0.5rem 2rem 0.5rem;
+    transition: all .3s ease;
   }
 }
+
+/* navbar css open and close */

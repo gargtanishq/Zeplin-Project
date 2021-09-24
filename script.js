@@ -12,6 +12,8 @@ scrollButtonLeft.onclick = function () {
   document.getElementById("selectGroupsId").scrollLeft -= 100;
 };
 
+// 
+
 // sorting the table content
 
 function sortTableByGroupName(table, column, asc = true) {
@@ -21,12 +23,11 @@ function sortTableByGroupName(table, column, asc = true) {
   const tBody = table.tBodies[0];
   // converts the data into arry form list
   const rows = Array.from(tBody.querySelectorAll("tr"));
-
+  console.log(rows);
   // sort each row
   const sortedRows = rows.sort((a, b) => {
     const aColText = a.querySelector("td").textContent.trim();
     const bColText = b.querySelector("td").textContent.trim();
-
     // if td1 > td2 then multiply by 1 to dirModifier to remain as it is and if not then multiply by -1 for desending
     return aColText > bColText ? 1 * dirModifier : -1 * dirModifier;
   });
@@ -58,6 +59,8 @@ whichSort.addEventListener("click", function () {
   sortTableByGroupName(tableElement, 1, !currentIsAscending);
 });
 
+// ------------------------------------------
+
 // search bar
 
 function searchGroupName() {
@@ -84,4 +87,28 @@ function searchGroupName() {
       element.style.display = "";
     }
   });
+}
+
+// debounce 
+
+function debounce(func, timeout = 1000){
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+const searchFunc = debounce(() => searchGroupName());
+
+// side nav-bar hide and display burger
+
+function toggleNavbar(){
+  let checkClass = document.getElementById("side-navbar");
+  console.log(checkClass);
+  if (checkClass.className === "navbar"){
+      checkClass.className += "close";
+  }
+  else{
+      checkClass.className = "navbar"; 
+  } 
 }
