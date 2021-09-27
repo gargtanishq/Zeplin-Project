@@ -215,6 +215,7 @@ aside {
   background-color: #ffff;
   margin-top: -18px;
   padding-top: 0.7rem;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 hr {
@@ -861,6 +862,42 @@ ul li.list:hover a {
   }
 }
 
+@media only screen and (max-width: 901px) and (orientation: landscape){
+  #toggleNavbar{
+    display: block;
+  }
+
+  aside{
+    overflow: auto;
+    transform: translate(-200%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .side-4{
+    margin-bottom: 4rem;
+    }
+
+  .fa-bars {
+    color: #e20074;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    transition: all 0.3s ease;
+  }
+
+  section {
+    margin-left: 30%;
+  }
+  .navbarclose {
+    transform: translate(1%);
+    z-index: 1;
+    width: 14rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  
+
+}
+
 @media only screen and (max-width: 900px) {
   .groupOwnerHid {
     display: none;
@@ -896,7 +933,9 @@ ul li.list:hover a {
   }
 
   section {
-    margin-left: 30%;
+    /* landscape check */
+    /* margin-left: 30%;  */
+    margin-left: 4%;
   }
   /* decrease the size of side nav text */
   .sub2,
@@ -1204,7 +1243,7 @@ ul li.list:hover a {
 
 /* landscape  */
 
-@media only screen and (max-width: 770px) and (orientation: landscape) {
+/* @media only screen and (max-width: 770px) and (orientation: landscape) {
   section {
     margin-left: 4%;
   }
@@ -1214,6 +1253,7 @@ ul li.list:hover a {
     width: 14rem;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   }
+
   #toggleNavbar {
     display: block;
     transition: all 0.3s ease;
@@ -1275,4 +1315,4 @@ ul li.list:hover a {
     width: 14rem;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   }
-}
+} */

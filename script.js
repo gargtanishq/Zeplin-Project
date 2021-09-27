@@ -144,6 +144,7 @@ function buttonGereration(limit) {
     ul.style.display = "flex";
     var nofPage = Math.ceil(noftr / limit);
     updatepage(1);
+    let updateflagpage = 0;
     for (let i = 1; i <= nofPage; i++) {
       let li = document.createElement("li");
       li.className = "list";
@@ -151,13 +152,13 @@ function buttonGereration(limit) {
       a.href = "#";
       a.setAttribute("data-page", i);
       a.setAttribute("id", i);
+      a.setAttribute("class", "activeClass");
       li.appendChild(a);
       a.innerText = i;
       ul.insertBefore(li, document.getElementById("tableList").childNodes[3]);
       a.onclick = (e) => {
         let x = e.target.getAttribute("data-page");
         updatepage(x);
-        a.classList.add("active");
         tableBody.innerHTML = "";
         x--;
         let start = limit * x;
@@ -176,12 +177,16 @@ function buttonGereration(limit) {
   let z = 0;
   function nextElement() {
     if (this.id == "nextId") {
-      z == arrayTr.length - limit? (z = 0): z / limit + 1 == nofPage? z: (z += limit);
+      z == arrayTr.length - limit
+        ? (z = 0)
+        : z / limit + 1 == nofPage
+        ? z
+        : (z += limit);
     }
     if (this.id == "prevId") {
       z == 0 ? arrayTr.length - limit : (z -= limit);
     }
-    updatepage(z/limit+1);
+    updatepage(z / limit + 1);
     tableBody.innerHTML = "";
     for (let i = z; i < z + limit; i++) {
       if (arrayTr[i] != null) {
@@ -218,7 +223,6 @@ function onChangeGoToPage(go) {
     updatepage(go);
 
     if (nofPage < goto) {
-      console.log("invalid go to");
       return;
     }
     let offset = goto * limit;
@@ -235,12 +239,23 @@ function onChangeGoToPage(go) {
 
 const GoToPage = debounce((go) => onChangeGoToPage(go));
 
-function updatepage(go){
-
+function updatepage(go) {
   var spanvalue1 = document.getElementById("goto_lower");
-  spanvalue1.textContent = (go*limit+1 - limit);
-  
-  var spanvalue2 = document.getElementById("goto_upper");
-  spanvalue2.textContent = (go*limit);
+  spanvalue1.textContent = go * limit + 1 - limit;
 
+  var spanvalue2 = document.getElementById("goto_upper");
+  spanvalue2.textContent = go * limit;
+}
+
+let element = document.getElementsByClassName("activeClass");
+for (let i = 0; i < element.length; i++) {
+  element[i].addEventListener("click", function () {
+    let activeOne = document.querySelector(".active");
+
+    if (activeOne) {
+      activeOne.classList.remove("active");
+    }
+
+    element[i].classList.add("active");
+  });
 }
