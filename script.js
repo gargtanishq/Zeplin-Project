@@ -12,7 +12,7 @@ scrollButtonLeft.onclick = function () {
   document.getElementById("selectGroupsId").scrollLeft -= 100;
 };
 
-// 
+//
 
 // sorting the table content
 
@@ -89,27 +89,158 @@ function searchGroupName() {
   });
 }
 
-// debounce 
+// debounce
 
-function debounce(func, timeout = 1000){
+function debounce(func, timeout = 1000) {
   let timer;
   return (...args) => {
     clearTimeout(timer);
-    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, timeout);
   };
 }
 const searchFunc = debounce(() => searchGroupName());
 
 // side nav-bar hide and display burger
 
-function toggleNavbar(){
+function toggleNavbar() {
   let checkClass = document.getElementById("side-navbar");
   console.log(checkClass);
-  if (checkClass.className === "navbar"){
-      checkClass.className += "close";
+  if (checkClass.className === "navbar") {
+    checkClass.className += "close";
+  } else {
+    checkClass.className = "navbar";
   }
-  else{
-      checkClass.className = "navbar"; 
-  } 
 }
 
+// pagination
+
+let tableElement = document.querySelector("table");
+let tableBody = tableElement.tBodies[0];
+let tr = Array.from(tableBody.querySelectorAll("tr"));
+let ul = document.querySelector("ul");
+let arrayTr = [];
+for (let i = 1; i < tr.length; i++) {
+  arrayTr.push(tr[i]);
+}
+
+let limit = 10;
+
+function displayTable(limit) {
+  tableBody.innerHTML = "";
+  for (let i = 0; i < limit; i++) {
+    tableBody.appendChild(arrayTr[i]);
+  }
+
+  buttonGereration(limit);
+}
+
+function buttonGereration(limit) {
+  const noftr = arrayTr.length;
+  if (noftr <= limit) {
+    ul.style.display = "none";
+  } else {
+    ul.style.display = "flex";
+    var nofPage = Math.ceil(noftr / limit);
+    updatepage(1);
+    for (let i = 1; i <= nofPage; i++) {
+      let li = document.createElement("li");
+      li.className = "list";
+      let a = document.createElement("a");
+      a.href = "#";
+      a.setAttribute("data-page", i);
+      a.setAttribute("id", i);
+      li.appendChild(a);
+      a.innerText = i;
+      ul.insertBefore(li, document.getElementById("tableList").childNodes[3]);
+      a.onclick = (e) => {
+        let x = e.target.getAttribute("data-page");
+        updatepage(x);
+        a.classList.add("active");
+        tableBody.innerHTML = "";
+        x--;
+        let start = limit * x;
+        let end = start + limit;
+        let page = arrayTr.slice(start, end);
+
+        for (let i = 0; i < page.length; i++) {
+          let item = page[i];
+          tableBody.appendChild(item);
+        }
+      };
+    }
+    // showing count
+  }
+
+  let z = 0;
+  function nextElement() {
+    if (this.id == "nextId") {
+      z == arrayTr.length - limit? (z = 0): z / limit + 1 == nofPage? z: (z += limit);
+    }
+    if (this.id == "prevId") {
+      z == 0 ? arrayTr.length - limit : (z -= limit);
+    }
+    updatepage(z/limit+1);
+    tableBody.innerHTML = "";
+    for (let i = z; i < z + limit; i++) {
+      if (arrayTr[i] != null) {
+        tableBody.appendChild(arrayTr[i]);
+      } else {
+        break;
+      }
+    }
+  }
+
+  document.getElementById("prevId").onclick = nextElement;
+  document.getElementById("nextId").onclick = nextElement;
+}
+
+displayTable(10);
+
+// select all
+
+function selectall(source) {
+  checkboxes = document.getElementsByClassName("subC");
+  for (var t = 0, n = checkboxes.length; t < n; t++) {
+    checkboxes[t].checked = source.checked;
+  }
+}
+
+// goto
+
+function onChangeGoToPage(go) {
+  var noftr = arrayTr.length;
+  var nofPage = Math.ceil(noftr / limit);
+  console.log(go, nofPage);
+  if (go <= nofPage && go > 0) {
+    var goto = go - 1;
+    updatepage(go);
+
+    if (nofPage < goto) {
+      console.log("invalid go to");
+      return;
+    }
+    let offset = goto * limit;
+    tableBody.innerHTML = "";
+    for (let i = offset; i < offset + limit; i++) {
+      if (arrayTr[i] != null) {
+        tableBody.appendChild(arrayTr[i]);
+      } else {
+        break;
+      }
+    }
+  }
+}
+
+const GoToPage = debounce((go) => onChangeGoToPage(go));
+
+function updatepage(go){
+
+  var spanvalue1 = document.getElementById("goto_lower");
+  spanvalue1.textContent = (go*limit+1 - limit);
+  
+  var spanvalue2 = document.getElementById("goto_upper");
+  spanvalue2.textContent = (go*limit);
+
+}

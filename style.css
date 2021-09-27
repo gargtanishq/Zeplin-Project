@@ -383,7 +383,7 @@ section {
   align-items: center;
 }
 
-.topButtons{
+.topButtons {
   font-size: 1rem;
 }
 
@@ -587,6 +587,7 @@ tr:not(:last-child) {
 tbody {
   display: block;
   height: 20rem;
+  /* height: calc(100vh - 28.5rem); */
   overflow: scroll;
   border-bottom: solid 1px #e8e9eb;
   border-top: solid 1px #e8e9eb;
@@ -730,6 +731,10 @@ a {
   transition: all 0.3s ease;
 }
 
+#tableList {
+  flex-direction: row-reverse;
+}
+
 .showing {
   padding-right: 0.5rem;
   border-right: 1px solid #979797;
@@ -766,7 +771,7 @@ ul li {
   margin: 0 0.2rem;
 }
 
-ul li.pageNumber {
+ul li.list {
   text-align: center;
 }
 
@@ -775,9 +780,13 @@ ul li a {
   text-decoration: none;
 }
 
-ul li.pageNumber:hover a,
-ul li.pageNumber.active a {
+ul li.list:hover a {
   color: #e20074;
+}
+
+.active {
+  color: #e20074;
+  font-weight: 600;
 }
 
 .allPageNo {
@@ -788,7 +797,6 @@ ul li.pageNumber.active a {
 .pageNumbersBtn {
   width: 1.2rem;
   font-size: 0.9rem;
-  margin-left: 0.5rem;
   transition: all 0.3s ease;
   padding: 0.2rem;
   display: flex;
@@ -1183,10 +1191,88 @@ ul li.pageNumber.active a {
 
 /* higher resolution  */
 @media only screen and (max-width: 4000px) and (min-width: 1800px) {
-  html{
-    font-size: 26px;
+  html {
+    font-size: 27px;
   }
-  .groupNameLink{
+  .groupNameLink {
     width: max-content;
+  }
+  tbody {
+    height: calc(100vh - 31rem);
+  }
+}
+
+/* landscape  */
+
+@media only screen and (max-width: 770px) and (orientation: landscape) {
+  section {
+    margin-left: 4%;
+  }
+  .navbarclose {
+    transform: translate(1%);
+    z-index: 1;
+    width: 14rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+  #toggleNavbar {
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  header {
+    z-index: 10;
+  }
+
+  aside {
+    z-index: 7;
+    box-shadow: 0 1px 4px 0 rgb(37 37 37 / 10%);
+    transition: all 0.3s ease;
+    height: calc(100vh - 3rem);
+    overflow: auto;
+  }
+
+  .side-4 {
+    margin-bottom: 1.5rem;
+  }
+
+  .fa-bars {
+    color: #e20074;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    transition: all 0.3s ease;
+  }
+
+  .createdDateHid,
+  .groupOwnerHid {
+    display: revert;
+  }
+}
+
+@media only screen and (max-width: 694px) and (orientation: landscape){
+  
+  .createdDateHid{
+    display: none;
+  }
+
+  }
+
+@media only screen and (max-width: 543px) and (orientation: landscape){
+  .groupOwnerHid{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 644px) and (orientation: landscape){
+  .groupOwnerHid{
+    display: none;
+  }
+
+  .navbarclose {
+    display: block;
+    transform: translate(1%);
+    z-index: 1;
+    width: 14rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   }
 }

@@ -19,463 +19,515 @@
   </head>
   <body>
     <!-- <div class="wrapper"> -->
-      <!-- header with logo and user info -->
-      <header>
-        
-        <div class="leftHead">
-          <i class="fa fa-bars" aria-hidden="true" onclick="toggleNavbar()" id="toggleNavbar"></i>
-          <img src="images/logo.jpg" alt="Loading..." class="logo" />
-          <p class="logoText cTag">COLUD</p>
-          <p class="logoText aTag">ACCESS</p>
+    <!-- header with logo and user info -->
+    <header>
+      <div class="leftHead">
+        <i
+          class="fa fa-bars"
+          aria-hidden="true"
+          onclick="toggleNavbar()"
+          id="toggleNavbar"
+        ></i>
+        <img src="images/logo.jpg" alt="Loading..." class="logo" />
+        <p class="logoText cTag">COLUD</p>
+        <p class="logoText aTag">ACCESS</p>
+      </div>
+      <div class="rightHead">
+        <img src="images/notifyBell.png" alt="Loading..." class="notifyBell" />
+        <div class="userInfo">
+          <span class="userName">John.Smith</span>
+          <span class="userProject">T-MOBILE USA</span>
         </div>
-        <div class="rightHead">
-          <img
-            src="images/notifyBell.png"
-            alt="Loading..."
-            class="notifyBell"
-          />
-          <div class="userInfo">
-            <span class="userName">John.Smith</span>
-            <span class="userProject">T-MOBILE USA</span>
+        <img src="images/userPhoto.jpg" alt="Loading..." class="userPhoto" />
+      </div>
+    </header>
+    <!-- side nav bar starts here -->
+    <aside id="side-navbar" class="navbar">
+      <!-- <i class='bx bx-menu'></i> -->
+      <div class="side-1">
+        <span class="sub1">YOUR GROUPS/PACKS</span>
+        <span class="sub2">You don't have access to anything yet</span>
+      </div>
+      <hr />
+      <div class="side-2">
+        <span class="sub1">YOUR REQUESTS</span>
+        <div class="requests">
+          <div class="request requestOneHover">
+            <span class="requestType">Pending</span>
+            <span class="requestCount">6</span>
           </div>
-          <img src="images/userPhoto.jpg" alt="Loading..." class="userPhoto" />
-        </div>
-      </header>
-      <!-- side nav bar starts here -->
-      <aside id="side-navbar" class="navbar">
-        <!-- <i class='bx bx-menu'></i> -->
-        <div class="side-1">
-          <span class="sub1">YOUR GROUPS/PACKS</span>
-          <span class="sub2">You don't have access to anything yet</span>
-        </div>
-        <hr />
-        <div class="side-2">
-          <span class="sub1">YOUR REQUESTS</span>
-          <div class="requests">
-            <div class="request requestOneHover">
-              <span class="requestType">Pending</span>
-              <span class="requestCount">6</span>
-            </div>
-            <div class="request requestTwoHover">
-              <span class="requestType">Approved</span>
-              <span class="requestCount">6</span>
-            </div>
-            <div class="request requestThreeHover">
-              <span class="requestType">Rejected</span>
-              <span class="requestCount">6</span>
-            </div>
+          <div class="request requestTwoHover">
+            <span class="requestType">Approved</span>
+            <span class="requestCount">6</span>
           </div>
-        </div>
-        <hr />
-        <div class="side-3">
-          <span class="sub1">YOUR APPROVALS</span>
-          <span class="sub2 sideSub3">You don't have any approvals yet</span>
-        </div>
-        <hr />
-        <div class="side-4">
-          <div class="allDetail">
-            <img src="images/groupLogo.svg" alt="." class="allDetailLogo" />
-            <span class="detailType">ALL GROUPS</span>
-          </div>
-          <div class="allDetail">
-            <img src="images/packLogo.svg" alt="." class="allDetailLogo" />
-            <span class="detailType">ALL PACKS</span>
+          <div class="request requestThreeHover">
+            <span class="requestType">Rejected</span>
+            <span class="requestCount">6</span>
           </div>
         </div>
-      </aside>
-      <!-- Middle content starts here -->
-      <section>
-        <p class="allGroups top">ALL GROUP:</p>
-        <div class="recommedNextPage">
-          <p class="recommendedGroups">RECOMMENDED GROUPS</p>
-          <div class="nextPageButtons">
-            <button class="btn prevPage" id="scrollPageLeft"><span class="topButtons"><</span></button>
-            <button class="btn nextPage" id="scrollPageRight"><span class="topButtons">></span></button>
-          </div>
+      </div>
+      <hr />
+      <div class="side-3">
+        <span class="sub1">YOUR APPROVALS</span>
+        <span class="sub2 sideSub3">You don't have any approvals yet</span>
+      </div>
+      <hr />
+      <div class="side-4">
+        <div class="allDetail">
+          <img src="images/groupLogo.svg" alt="." class="allDetailLogo" />
+          <span class="detailType">ALL GROUPS</span>
         </div>
-        <div class="selectGroups" id="selectGroupsId">
-          <div class="group">
-            <img src="images/groupLogo.svg" alt="." class="groupLogo" />
-            <div class="groupMentorName">
-              <span class="groupName" title="ABC Security Groups and Ltds"
-                >ABC Security Groups and Ltds</span
-              >
-              <span class="mentorName">John Smith</span>
-            </div>
+        <div class="allDetail">
+          <img src="images/packLogo.svg" alt="." class="allDetailLogo" />
+          <span class="detailType">ALL PACKS</span>
+        </div>
+      </div>
+    </aside>
+    <!-- Middle content starts here -->
+    <section>
+      <p class="allGroups top">ALL GROUP:</p>
+      <div class="recommedNextPage">
+        <p class="recommendedGroups">RECOMMENDED GROUPS</p>
+        <div class="nextPageButtons">
+          <button class="btn prevPage" id="scrollPageLeft">
+            <span class="topButtons"><</span>
+          </button>
+          <button class="btn nextPage" id="scrollPageRight">
+            <span class="topButtons">></span>
+          </button>
+        </div>
+      </div>
+      <div class="selectGroups" id="selectGroupsId">
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName" title="ABC Security Groups and Ltds"
+              >ABC Security Groups and Ltds</span
+            >
+            <span class="mentorName">John Smith</span>
+          </div>
 
-            <img src="images/+_addSign.svg" alt=".." class="addSign" />
+          <img src="images/+_addSign.svg" alt=".." class="addSign" />
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName" title="ABC Security Groups and Ltds"
+              >ABC Security Groups and Ltds</span
+            >
+            <span class="mentorName">John Smith</span>
           </div>
-          <div class="group">
-            <img src="images/groupLogo.svg" alt="." class="groupLogo" />
-            <div class="groupMentorName">
-              <span class="groupName" title="ABC Security Groups and Ltds"
-                >ABC Security Groups and Ltds</span
-              >
-              <span class="mentorName">John Smith</span>
-            </div>
 
-            <img src="images/+_addSign.svg" alt=".." class="addSign" />
+          <img src="images/+_addSign.svg" alt=".." class="addSign" />
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName" title="ABC Security Groups and Ltds"
+              >ABC Security Groups and Ltds</span
+            >
+            <span class="mentorName">John Smith</span>
           </div>
-          <div class="group">
-            <img src="images/groupLogo.svg" alt="." class="groupLogo" />
-            <div class="groupMentorName">
-              <span class="groupName" title="ABC Security Groups and Ltds"
-                >ABC Security Groups and Ltds</span
-              >
-              <span class="mentorName">John Smith</span>
-            </div>
 
-            <img src="images/+_addSign.svg" alt=".." class="addSign" />
+          <img src="images/+_addSign.svg" alt=".." class="addSign" />
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName" title="ABC Security Groups and Ltds"
+              >ABC Security Groups and Ltds</span
+            >
+            <span class="mentorName">John Smith</span>
           </div>
-          <div class="group">
-            <img src="images/groupLogo.svg" alt="." class="groupLogo" />
-            <div class="groupMentorName">
-              <span class="groupName" title="ABC Security Groups and Ltds"
-                >ABC Security Groups and Ltds</span
-              >
-              <span class="mentorName">John Smith</span>
-            </div>
 
-            <img src="images/+_addSign.svg" alt=".." class="addSign" />
+          <img src="images/+_addSign.svg" alt=".." class="addSign" />
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName" title="ABC Security Groups and Ltds"
+              >ABC Security Groups and Ltds</span
+            >
+            <span class="mentorName">John Smith</span>
           </div>
-          <div class="group">
-            <img src="images/groupLogo.svg" alt="." class="groupLogo" />
-            <div class="groupMentorName">
-              <span class="groupName" title="ABC Security Groups and Ltds"
-                >ABC Security Groups and Ltds</span
-              >
-              <span class="mentorName">John Smith</span>
-            </div>
 
-            <img src="images/+_addSign.svg" alt=".." class="addSign" />
+          <img src="images/+_addSign.svg" alt=".." class="addSign" />
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName" title="ABC Security Groups and Ltds"
+              >ABC Security Groups and Ltds</span
+            >
+            <span class="mentorName">John Smith</span>
           </div>
-          <div class="group">
-            <img src="images/groupLogo.svg" alt="." class="groupLogo" />
-            <div class="groupMentorName">
-              <span class="groupName" title="ABC Security Groups and Ltds"
-                >ABC Security Groups and Ltds</span
-              >
-              <span class="mentorName">John Smith</span>
-            </div>
 
-            <img src="images/+_addSign.svg" alt=".." class="addSign" />
+          <img src="images/+_addSign.svg" alt=".." class="addSign" />
+        </div>
+        <div class="group">
+          <img src="images/groupLogo.svg" alt="." class="groupLogo" />
+          <div class="groupMentorName">
+            <span class="groupName" title="ABC Security Groups and Ltds"
+              >ABC Security Groups and Ltds</span
+            >
+            <span class="mentorName">John Smith</span>
           </div>
-          <div class="group">
-            <img src="images/groupLogo.svg" alt="." class="groupLogo" />
-            <div class="groupMentorName">
-              <span class="groupName" title="ABC Security Groups and Ltds"
-                >ABC Security Groups and Ltds</span
-              >
-              <span class="mentorName">John Smith</span>
-            </div>
 
-            <img src="images/+_addSign.svg" alt=".." class="addSign" />
+          <img src="images/+_addSign.svg" alt=".." class="addSign" />
+        </div>
+      </div>
+      <!-- table content starts here -->
+      <div class="tableOutlet">
+        <div class="tableTop">
+          <p class="allGroups bottom">ALL GROUPS</p>
+          <div class="rightTop">
+            <!-- magnifying glass input  -->
+            <i class="bx bx-search"></i>
+            <input
+              type="text"
+              placeholder="Find a group"
+              style="font-family: Arial, FontAwesome"
+              class="inputGroup"
+              id="inputGroupName"
+              onkeyup="searchFunc()"
+            />
+            <button class="newGroup"><span>+ New Group</span></button>
           </div>
         </div>
-        <!-- table content starts here -->
-        <div class="tableOutlet">
-          <div class="tableTop">
-            <p class="allGroups bottom">ALL GROUPS</p>
-            <div class="rightTop">
-              <!-- magnifying glass input  -->
-              <i class="bx bx-search"></i>
-              <input
-                type="text"
-                placeholder="Find a group"
-                style="font-family: Arial, FontAwesome"
-                class="inputGroup"
-                id="inputGroupName"
-                onkeyup="searchFunc()"
+        <!-- table starts here  -->
+        <table>
+          <thead>
+            <tr>
+              <th class="checkboxGroupNameWidth">
+                <input
+                  type="checkbox"
+                  class="checkbox"
+                  onClick="selectall(this)"
                 />
-              <button class="newGroup"><span>+ New Group</span></button>
-            </div>
-          </div>
-          <!-- table starts here  -->
-          <table>
-            <thead>
-              <tr>
-                <th class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox" />
-                  <span>GROUP NAME</span>
-                  <img src="images/Sorting.svg" alt=".." id="sorting" class="sort">
-                </th>
-                <th class="groupOwnerHid">GROUP OWNER</th>
-                <th class="createdDateHid">CREATED ON</th>
-                <th class="actions">ACTIONS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >The Meme Team</a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Mayank</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">20/06/2021</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >Orange Crush</a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Yash</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">10/10/2022</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >D HRTeam </a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Abhinav</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">20/12/2010</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >CBE Security groups </a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Sanjana</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">18/09/1996</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >Br HRCare Talent Scout Sr.Managers</a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Vaibhav</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">20/06/1998</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >AppRas</a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Zubair</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">02/01/2013</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >Ar Orange Crush </a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Chandu</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">20/06/1980</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >ATeam </a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Kabair</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">20/06/1996</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      > ABC Security Groups</a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Rachit</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">13/04/2009</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-              <tr>
-                <td class="checkboxGroupNameWidth">
-                  <input type="checkbox" class="checkbox subC" />
-                  <span class="imageText"
-                    ><img
-                      src="images/groupLogo.svg"
-                      alt=""
-                      class="groupLogotable"
-                    />
-                    <a href="#" class="groupNameLink"
-                      >1HRCare Talent Scout Sr.Managers</a
-                    ></span
-                  >
-                </td>
-                <td class="groupOwnerHid">
-                  <span class="imageText">
-                    <img src="images/userIcon.svg" alt="" class="userIcon" />
-                    <a href="#">Nikhil</a>
-                  </span>
-                </td>
-                <td class="createdDateHid">18/05/1996</td>
-                <td class="actions">
-                  <button class="joinBtn"><span>+ Join</span></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="bottomOptions">
-            <span class="showing"> Showing 10-20 </span>
-            <label for="goto" class="goto">Goto</label>
-            <input type="text" class="gotoInput" />
-            <div class="pageNumbers">
-              <!-- <button class="btn pageNumbersBtn"><span><</span></button> -->
-              <!-- <span class="allPageNo">1 2 3 4...10</span> -->
-              <ul>
-                <li><a href="#" class="prev btn pageNumbersBtn"><</a></li>
-                <li class="pageNumber active"><a href="#">1</a></li>
-                <li class="pageNumber"><a href="#">2</a></li>
-                <li class="pageNumber"><a href="#">3</a></li>
-                <li class="pageNumber"><a href="#">4</a></li>
-                <li><a href="#" class="next btn pageNumbersBtn">></a></li>
-              </ul>
-            </div>
+                <span>GROUP NAME</span>
+                <img
+                  src="images/Sorting.svg"
+                  alt=".."
+                  id="sorting"
+                  class="sort"
+                />
+              </th>
+              <th class="groupOwnerHid">GROUP OWNER</th>
+              <th class="createdDateHid">CREATED ON</th>
+              <th class="actions">ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink">The Meme Team</a></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Mayank</a>
+                </span>
+              </td>
+              <td class="createdDateHid">20/06/2021</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink">Orange Crush</a></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Yash</a>
+                </span>
+              </td>
+              <td class="createdDateHid">10/10/2022</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink">D HRTeam </a></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Abhinav</a>
+                </span>
+              </td>
+              <td class="createdDateHid">20/12/2010</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >CBE Security groups
+                  </a></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Sanjana</a>
+                </span>
+              </td>
+              <td class="createdDateHid">18/09/1996</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >Br HRCare Talent Scout Sr.Managers</a
+                  ></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Vaibhav</a>
+                </span>
+              </td>
+              <td class="createdDateHid">20/06/1998</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink">AppRas</a></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Zubair</a>
+                </span>
+              </td>
+              <td class="createdDateHid">02/01/2013</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink">Ar Orange Crush </a></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Chandu</a>
+                </span>
+              </td>
+              <td class="createdDateHid">20/06/1980</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink">ATeam </a></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Kabair</a>
+                </span>
+              </td>
+              <td class="createdDateHid">20/06/1996</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink">
+                    ABC Security Groups</a
+                  ></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Rachit</a>
+                </span>
+              </td>
+              <td class="createdDateHid">13/04/2009</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >1HRCare Talent Scout Sr.Managers</a
+                  ></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Varun Patil</a>
+                </span>
+              </td>
+              <td class="createdDateHid">18/05/1996</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >1HRCare Talent Scout Sr.Managers</a
+                  ></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Nikhil</a>
+                </span>
+              </td>
+              <td class="createdDateHid">18/05/1996</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="checkboxGroupNameWidth">
+                <input type="checkbox" class="checkbox subC" />
+                <span class="imageText"
+                  ><img
+                    src="images/groupLogo.svg"
+                    alt=""
+                    class="groupLogotable"
+                  />
+                  <a href="#" class="groupNameLink"
+                    >1HRCare Talent Scout Sr.Managers</a
+                  ></span
+                >
+              </td>
+              <td class="groupOwnerHid">
+                <span class="imageText">
+                  <img src="images/userIcon.svg" alt="" class="userIcon" />
+                  <a href="#">Manoj Kumar</a>
+                </span>
+              </td>
+              <td class="createdDateHid">18/05/1996</td>
+              <td class="actions">
+                <button class="joinBtn"><span>+ Join</span></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="bottomOptions">
+          <span class="showing">
+            Showing <span id="goto_lower"></span> -
+            <span id="goto_upper"></span>
+          </span>
+          <label for="goto" class="goto">Goto</label>
+          <input type="text" class="gotoInput" onkeyup="GoToPage(this.value)" />
+          <div class="pageNumbers">
+            <ul id="tableList">
+              <li>
+                <a href="#" class="prev btn pageNumbersBtn" id="nextId">></a>
+              </li>
+              <li>
+                <a href="#" class="next btn pageNumbersBtn" id="prevId"><</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     <!-- </div> -->
   </body>
   <script src="script.js"></script>
